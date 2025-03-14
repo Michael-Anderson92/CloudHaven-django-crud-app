@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/albums/album-detail.css' %}">
+{% endblock head %}
+
+{% block content %}
+<section class="album-container">
+    <div class="album-img">
+        <img src="{{ album.pictures.first.image.url }}" alt="Main picture of the album" />
+    </div>
+    <div class="album-details">
+        <h1>{{ album.title }}</h1>
+        <p>{{ album.description }}</p>
+        <h3>Associated Users</h3>
+        <ul>
+            {% for user in album.users.all %}
+                <li>{{ user.username }}</li>
+            {% empty %}
+                <p>No users associated with this album yet.</p>
+            {% endfor %}
+        </ul>
+
+        <div class="album-actions">
+            <a href="{% url 'album-update' album.pk %}" class="btn warn">Edit</a>
+            <a href="{% url 'album-delete' album.pk %}" class="btn danger">Delete</a>
+        </div>
+    </div>
+</section>
+
+<div class="pictures-container">
+    <section class="pictures">
+        <h2>Pictures in the Album</h2>
+        <div class="pictures-grid">
+            {% for picture in album.pictures.all %}
+                <div class="picture-card">
+                    <img src="{{ picture.image.url }}" alt="Picture in album {{ album.title }}">
+                    <h4>{{ picture.title }}</h4>
+                    <p>{{ picture.comment }}</p>
+                    <form action="{% url 'remove-picture-from-album' album.id picture.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="btn danger">Remove Picture</button>
+                    </form>
+                </div>
+            {% empty %}
+                <p>No pictures in this album yet!</p>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <section class="add-picture">
+        <h2>Add Pictures to Album</h2>
+        <form action="{% url 'add-picture-to-album' album.id picture.id %}" method="post">
+            {% csrf_token %}
+            <select name="picture_id">
+                {% for picture in all_pictures %}
+                    {% if picture not in album.pictures.all %}
+                        <option value="{{ picture.id }}">{{ picture.title }}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+            <button type="submit" class="btn submit">Add Picture</button>
+        </form>
+    </section>
+</div>
+{% endblock content %}

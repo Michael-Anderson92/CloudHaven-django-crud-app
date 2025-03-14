@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+{% block content %}
+
+<section class="logo-container">
+  <div class="title-container">
+    CloudHaven
+  </div>
+  {% if not user.is_authenticated %}  
+  <section>
+    <form id="login-form" action="{% url 'home' %}" method="POST" class="login">
+      <h1>Log in</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="hidden" name="next" value="{{ next }}">
+      <button type="submit" class="btn submit">Login</button>
+      <p class="login-question">
+        Don't have an account? 
+        <a href="{% url 'signup' %}">Signup</a>
+      </p>
+    </form>
+  </section>
+  {% endif %}
+</section>
+
+{% endblock %}

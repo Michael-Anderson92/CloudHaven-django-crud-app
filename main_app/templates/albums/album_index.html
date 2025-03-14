@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/albums/album_index.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <!-- Page header content (optional) -->
+</section>
+<section class="card-container">
+    {% for album in object_list %}
+    <div class="card">
+        <div>
+            <img src="{{ album.cover_image.url }}" alt="{{ album.title }} cover" style="width: 100%; height: auto;" />
+        </div>    
+        <h2>{{ album.title }}</h2>
+        
+        
+        <!-- Buttons for Edit and Delete -->
+        <div class="card-buttons">
+            <a href="{% url 'album_update' album.id %}" class="btn edit-btn">&nbsp&nbspEdit&nbsp&nbsp</a>
+            <a href="{% url 'album_delete' album.id %}" class="btn delete-btn">Delete</a>
+        </div>
+    </div>
+    {% empty %}
+    <p>No albums found!</p>
+    {% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the header content */
+  gap: 12px; /* Adds spacing between elements */
+  padding: 15px;
+  background-color: #f4f4f9; /* Subtle background color */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.page-header h1 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the form */
+  gap: 20px; /* Adds spacing between form elements */
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 8px;
+  vertical-align: middle;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.submit {
+  background-color: #3498db; /* Blue submit button */
+  color: #fff;
+}
+
+.btn.submit:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+}

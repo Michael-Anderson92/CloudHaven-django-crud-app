@@ -1,0 +1,100 @@
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Maximum of 5 cards per row with equal spacing */
+  gap: 30px; /* Increased space between the cards */
+  padding: 30px; /* Adds padding around the grid */
+  justify-content: center; /* Centers the entire grid */
+  max-width: 100%; /* Prevents horizontal overflow */
+}
+
+/* Card Styling */
+.card {
+  width: 250px; /* Fixed card size */
+  height: 300px;
+  background-color: #f0f8ff; /* Light sky blue */
+  border: 1px solid #bcd4e6; /* Muted sky blue border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 20px; /* Padding inside the card */
+  text-align: center; /* Center-align text */
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.card img {
+  aspect-ratio: 4 / 3;
+  width: 100%; /* Full width of the card */
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Title and Description Styling */
+.card h2 {
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: #333;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 50px; /* Space to avoid overlapping buttons */
+}
+
+/* Button Container */
+.card-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* Buttons */
+.card-buttons .btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.card-buttons .edit-btn {
+  background-color: #33ca7f;
+}
+
+.card-buttons .edit-btn:hover {
+  background-color: #43a047;
+}
+
+.card-buttons .delete-btn {
+  background-color: #fc440f;
+}
+
+.card-buttons .delete-btn:hover {
+  background-color: #e55b4f;
+}
+
+/* Responsive Layout for Phones */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr); /* Show 2 cards per row on smaller screens */
+    gap: 20px;
+  }
+}

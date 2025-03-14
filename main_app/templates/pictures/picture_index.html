@@ -1,0 +1,36 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/pictures/picture-index.css' %}" />
+{% endblock %} 
+
+{% block content %}
+
+<section class="page-header">
+  <h1>All Pictures</h1>
+  <img src="{% static 'images/camera-icon.svg' %}" alt="Camera icon" />
+  <img src="{% static 'images/gallery-icon.svg' %}" alt="Gallery icon" />
+  <img src="{% static 'images/picture-frame-icon.svg' %}" alt="Picture frame icon" />
+</section>
+
+<section class="card-container">
+  {% for picture in picture_list %}
+    <div class="card">
+      <div class="card-img-container">
+        <img src="{{ picture.image.url }}" alt="Picture titled '{{ picture.title }}'" />
+      </div>
+      <a href="{% url 'picture-detail' picture.id %}">
+        <div class="card-content">
+          <h2>{{ picture.title }}</h2>
+          <p>{{ picture.comment }}</p>
+          <p><small>Uploaded: {{ picture.created_at|date:"F j, Y" }}</small></p>
+        </div>
+      </a>
+    </div>
+  {% empty %}
+    <p>No pictures available at the moment. Add some to get started!</p>
+  {% endfor %}
+</section>
+
+{% endblock %}
