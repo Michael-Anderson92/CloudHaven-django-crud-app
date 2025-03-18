@@ -1,23 +1,38 @@
-# Stretch goals:
-Consume an API:
+![Screenshot of CloudHaven](/main_app/static/images/cloudhaven-home.png)
 
-1. Unsplash API
-  Free to use with generous limits (50 requests per hour for non-commercial use).
-  Provides high-quality, royalty-free images.
-  Python-friendly and easy to integrate with Django.
+<h1 align="center"><strong>CloudHaven Online Photo Album</strong></h1>
+
+<p align="center"> Created by <a href="https://www.linkedin.com/in/cloud9coding/">Michael Anderson</a> </p>
+
+<p align="center"> <a href="https://cloudhaven-2862607692fd.herokuapp.com/">CLICK TO ACCESS WEBSITE</a> </p>
+
+<div align="center"> <img src="https://img.shields.io/badge/Portfolio-blue?style=flat&logo=internet-explorer" alt="Portfolio"> <a href="https://www.linkedin.com/in/cloud9coding/"> <img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="LinkedIn"> </a> </div>
+
+<div align="center"> <img src="https://img.shields.io/github/stars/Michael-Anderson92/Health-Nut?style=flat" alt="Stars"> <img src="https://img.shields.io/github/forks/Michael-Anderson92/Health-Nut?style=flat" alt="Forks"> </div>
+
+<div align="center"> <img src="https://img.shields.io/badge/Version-1.0.0-green?style=flat" alt="Version"> </div>
+
+## 📄 Description
+
+CloudHaven is a personalized photo album collection application to easily keep track and store your memories.
 
 
-2. Pexels API
-  Free access to a large collection of stock photos and videos.
-  Simple to use with Python, and works well with Django for themed photo generation.
+## 💻 Technologies Used
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5)
 
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github)
+![VSCode](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code)
 
-3. Pixabay API
-  Offers free images, illustrations, and videos.
-  Python-compatible and straightforward to integrate into Django projects.
-  Explore it here.
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-336791?style=flat&logo=postgresql&logoColor=white)
+![Django](https://img.shields.io/badge/-Django-092E20?style=flat&logo=django&logoColor=white)
 
-4. Google Photos API
-  Free tier available, but requires user authentication via OAuth2.
-  Ideal for accessing user-specific photos and albums.
-  Works well with Django for personal photo management apps.
+## 📡 Upcoming Features
+
+[:x:] Implement AWS Photobucket for better photo storage.
+
+[:x:] Social features to connect with friends and share albums / photos.
+
+[:x:] Mobile app compatibility.
