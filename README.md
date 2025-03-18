@@ -1,4 +1,4 @@
-![Screenshot of CloudHaven](/main_app/static/images/cloud-background.jpg)
+![Screenshot of CloudHaven](/main_app/static/images/cloudhaven-home.png)
 
 <h1 align="center"><strong>CloudHaven Online Photo Album</strong></h1>
 
