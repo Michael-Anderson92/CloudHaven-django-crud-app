@@ -1,3 +1,5 @@
+![Screenshot of CloudHaven](/main_app/static/images/cloud-background.jpg)
+
 <h1 align="center"><strong>CloudHaven Online Photo Album</strong></h1>
 
 <p align="center"> Created by <a href="https://www.linkedin.com/in/cloud9coding/">Michael Anderson</a> </p>
